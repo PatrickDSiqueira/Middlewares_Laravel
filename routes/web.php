@@ -11,5 +11,10 @@
 |
 */
 
-Route::get('/usuarios', 'UsuarioControlador@index');
+Route::get('/usuarios', 'UsuarioControlador@index')
+    ->middleware('primeiro','segundo');
+Route::get('/terceiro', 'UsuarioControlador@index')
+    ->middleware('terceiro:João,65');
+
+
 
